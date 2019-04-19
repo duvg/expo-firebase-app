@@ -1,21 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View } from 'react-native';
+import AppButton from './application/components/AppButton';
+import Preloader from './application/components/Preloader';
+import BackgroundImage from './application/components/BackgroundImage';
+
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <BackgroundImage
+        source={require('./assets/images/back.png')}
+      >
+        <Text style={{color: '#fff', marginTop: 100, alignSelf:'center'}}>Saludos</Text>
+      </BackgroundImage>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
